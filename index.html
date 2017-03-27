@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>Formulario</title>
+    
+</head>
+<body>
+    <h1>Articulos</h1>
+    <fieldset>
+    <div id="comentarios">        
+        
+            
+        
+    </div>
+        </fieldset>
+    <div>
+        <form>
+            <button id="texGrand"  style="width:100px ; height:20px" onclick="tamGrand();return false">Texto Grande</button>
+            <button id="texMediano"  style="width:120px ; height:20px" onclick="tamMed();return false">Texto Mediano</button>
+            <button id="texPequeño"  style="width:120px ; height:20px" onclick="tamChic();return false">Texto Pequeño</button>
+            <button style="width:120px ; height:20px" onclick="colorFond();return false" >Color de fondo</button>
+            <button style="width:120px ; height:20px" onclick="colorFont();return false" >Color de Letra</button>
+            <button style="width:120px ; height:20px" onclick="aliniaCentro();return false" >Aliniacion Centro</button>
+            <button style="width:130px ; height:20px" onclick="aliniaDer();return false" >Aliniacion Derecha</button>
+            <button style="width:130px ; height:20px" onclick="aliniaIzq();return false" >Aliniacion Izquierda</button>
+        </form>
+    </div>
+    <div id="texarea">
+        <form>            
+            <textarea id="textar" rows="10" cols="100" onkeyup="vistaPrevia(this.value); return false" > </textarea>
+        </form> 
+        <h2>Contenido</h2> 
+    </div>    
+    <div>
+        <p id="vistaPrevia" name="parrafo"></p>
+               
+    </div>
+    <form>
+    <input type="submit" value="Enviar Comentario" onclick="subirComentario();return false">
+    </form>
+    <script src="javascript.js"></script>
+    
+</body>
+</html>
