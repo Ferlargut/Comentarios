@@ -1,6 +1,7 @@
 function vistaPrevia(texto){
-    texto=texto.replace(/n/gi,"<br/>");
-    comentarios=document.getElementById("vistaPrevia").innerHTML = texto;
+        var comentario=texto;
+        var vistaprevia = document.getElementById("vistaPrevia");
+            vistaprevia.innerHTML = comentario;
 }
 function tamGrand(){    
     document.getElementById("vistaPrevia").style.fontSize="60px";
@@ -32,8 +33,9 @@ function aliniaIzq(){
 function subirComentario(){
     var comentario=document.getElementById("vistaPrevia");
     var nuevo=comentario.cloneNode(true);
+    nuevo.id=Date.now();
     var lugar= document.getElementById("comentarios");
-    lugar.appendChild(nuevo);
+       lugar.appendChild(nuevo);
   
 }
 
